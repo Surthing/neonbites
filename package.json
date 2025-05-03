@@ -1,0 +1,12 @@
+{
+  "name": "neonbites",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "update": "node getTickets.js && hugo"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

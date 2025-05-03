@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="/images/favlcon34.png" type="image/png">
+  <title>Neonbites</title>
+  <style>
+    body {
+      font-family: "Post No Bills Colombo";
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    img {
+      max-width: 100%;
+      /* Responsive */
+      height: auto;
+    }
+  </style>
+</head>
+
+<body>
+
+  <img src="images/logo.png" alt="Homepage Logo" style="width: 664px; height: 273px;">
+  <br>
+
+  <div id="karusel">
+    {{ range $index, $page := (where .Site.RegularPages "Section" "karusel").ByWeight }}
+      <div class="slide" id="slide-{{ add $index 1 }}">
+        <h2>{{ $page.Title }}</h2>
+        <p>{{ $page.Content }}</p>
+      </div>
+    {{ end }}
+  </div>
+
+  <button class="prev-btn">Previous</button>
+  <button class="next-btn">Next</button>
+
+  <section style="margin-top: 1100px;">
+    <h1>Welcome to the Landing Page</h1>
+    <p>This starts lower on the page.</p>
+  </section>
+
+  <div id="kalendar"></div>
+
+  <script src="/js/karusel.js"></script>
+
+  <script>fetch("files/kalendar.html")
+      .then(res => res.text())   // this returns a Promise<string>
+      .then(html => {
+        document.getElementById("kalendar").innerHTML = html;
+
+      });
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta name="generator" content="Hugo 0.145.0"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="/images/favlcon34.png" type="image/png">
+  <title>Neonbites</title>
+  <style>
+    body {
+      font-family: "Post No Bills Colombo";
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    img {
+      max-width: 100%;
+       
+      height: auto;
+    }
+  </style>
+</head>
+
+<body>
+
+  <img src="images/logo.png" alt="Homepage Logo" style="width: 664px; height: 273px;">
+  <br>
+
+  <div id="karusel">
+    
+      <div class="slide" id="slide-1">
+        <h2>Infotext</h2>
+        <p><p>Beim NeonBites Bankett erwartet Sie ein einzigartiges 5-Gänge-Gourmetmenü, das im Schwarzlicht erstrahlt und Ihre Sinne verzaubert. Jede Speise ist kunstvoll inszeniert, während ein exklusives Synthesizer-Konzert das perfekte Ambiente schafft. Farben, Formen und Geschmack verschmelzen zu einem faszinierenden Gesamterlebnis. Also, worauf warten Sie noch? Tauchen Sie ein in diese leuchtende Welt voller Überraschungen!</p>
+</p>
+      </div>
+    
+      <div class="slide" id="slide-2">
+        <h2>Test2</h2>
+        <p><p>testtesttesttest</p>
+</p>
+      </div>
+    
+      <div class="slide" id="slide-3">
+        <h2>Test</h2>
+        <p><p>test 123</p>
+</p>
+      </div>
+    
+  </div>
+
+  <button class="prev-btn">Previous</button>
+  <button class="next-btn">Next</button>
+
+  <section style="margin-top: 1100px;">
+    <h1>Welcome to the Landing Page</h1>
+    <p>This starts lower on the page.</p>
+  </section>
+
+  <div id="kalendar"></div>
+
+  <script src="/js/karusel.js"></script>
+
+  <script>fetch("files/kalendar.html")
+      .then(res => res.text())   
+      .then(html => {
+        document.getElementById("kalendar").innerHTML = html;
+
+      });
+  </script>
+
+</body>
+
+</html>

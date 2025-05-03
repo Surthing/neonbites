@@ -1,0 +1,10 @@
+<html>
+    <script>
+        fetch('/karusel.html')
+      .then(res => res.text())   // this returns a Promise<string>
+      .then(html => {
+        document.getElementById("karusel").innerHTML = html;
+
+      });
+    </script>
+</html>
