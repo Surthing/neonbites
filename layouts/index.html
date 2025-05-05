@@ -8,27 +8,46 @@
   <style>
     body {
       font-family: "Post No Bills Colombo";
-      display: flex;
+      color: #ffffff;
+      background-color: black;
+      display: flex; 
       flex-direction: column;
       align-items: center;
       margin: 0;
       padding: 0;
     }
-
-    img {
+    .flicker {
+    animation: flicker 6s infinite alternate;
+  }
+  @keyframes flicker {
+  0% { opacity: 1; } 
+  90% { opacity: 1; }  
+  95% { opacity: 0.7; } 
+  100% { opacity: 0,3; }   
+}
+.slide{
+  font-size: xx-large;
+  text-align-last: left;
+}
+#karusel + div {
+  margin-top: 150px; 
+}
+    /* img {
       max-width: 100%;
-      /* Responsive */
       height: auto;
-    }
+    } */
   </style>
 </head>
-
 <body>
-
-  <img src="images/logo.png" alt="Homepage Logo" style="width: 664px; height: 273px;">
+  <div style="display: grid; width: 1000px; height: 950px;">
+    <img src="images/neonbites_schnellexport-5.jpg" style="grid-area: 1/1; width: 100%; height: 100%; object-fit: cover;">
+    <img src="images/logo.png" class="flicker" style="grid-area: 1/1; width: 50%; z-index: 2; align-self: start;">
+  </div>
+  <!-- <img src="images/logo.png" alt="Homepage Logo" style="width: 664px; height: 273px;">
+  <img src="images/neonbites_schnellexport-5.jpg" alt="Homepage Frontbild" style="width: 960px; height: 640px;"> -->
   <br>
 
-  <div id="karusel">
+  <div id="karusel" style="display: grid; width: auto; height: 200px;">
     {{ range $index, $page := (where .Site.RegularPages "Section" "karusel").ByWeight }}
       <div class="slide" id="slide-{{ add $index 1 }}">
         <h2>{{ $page.Title }}</h2>
@@ -36,9 +55,10 @@
       </div>
     {{ end }}
   </div>
-
+<div>
   <button class="prev-btn">Previous</button>
   <button class="next-btn">Next</button>
+</div>
 
   <section style="margin-top: 1100px;">
     <h1>Welcome to the Landing Page</h1>

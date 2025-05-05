@@ -5,4 +5,4 @@ title = 'Test2'
 weight = '2'
 +++
 
-testtesttesttest
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl eget ultricies tincidunt, nisl nisl aliquam nisl, eget ultricies nisl nisl eget nisl. Nullam auctor, nisl eget ultricies tincidunt.

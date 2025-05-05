@@ -1,7 +1,7 @@
 +++
 date = '2025-04-15T16:52:27+02:00'
 draft = true
-title = 'Infotext'
+title = 'Über NeonBites'
 weight = '1'
 +++
 
